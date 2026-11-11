@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule, FormsModule],
   template: `
     <section class="contact">
       <div class="container">
@@ -12,10 +13,10 @@ import { FormsModule } from '@angular/forms';
           <div class="contact-info">
             <h1>Contactez-moi</h1>
             <p class="contact-description">
-              Intéressé par mon profil ? N'hésitez pas à me contacter pour discuter 
-              d'opportunités de stage, d'alternance ou de collaboration sur des projets innovants.
+              Intéressé par mon profil ? Je suis ouvert aux opportunités de stage, d'alternance,
+              de collaboration ou de missions sur des projets backend, cloud et data.
             </p>
-            
+
             <div class="contact-methods">
               <div class="contact-method">
                 <div class="method-icon">
@@ -28,7 +29,7 @@ import { FormsModule } from '@angular/forms';
                   <p>lelemoussa12@gmail.com</p>
                 </div>
               </div>
-              
+
               <div class="contact-method">
                 <div class="method-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -37,10 +38,10 @@ import { FormsModule } from '@angular/forms';
                 </div>
                 <div class="method-details">
                   <h3>Téléphone</h3>
-                  <p>+225 07 67 90 29 15 / +225 05 75 22 28 36</p>
+                  <p>+225 07 67 90 29 15</p>
                 </div>
               </div>
-              
+
               <div class="contact-method">
                 <div class="method-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -52,7 +53,7 @@ import { FormsModule } from '@angular/forms';
                   <p>linkedin.com/in/kante-moussa-7994a2285</p>
                 </div>
               </div>
-              
+
               <div class="contact-method">
                 <div class="method-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -65,86 +66,42 @@ import { FormsModule } from '@angular/forms';
                 </div>
               </div>
             </div>
-            
+
             <div class="availability">
               <h3>Disponibilité</h3>
-              <div class="availability-item">
-                <span class="status available"></span>
-                <span>Disponible pour stage/alternance</span>
-              </div>
-              <div class="availability-item">
-                <span class="status available"></span>
-                <span>Ouvert aux projets freelance</span>
-              </div>
-              <div class="availability-item">
-                <span class="status available"></span>
-                <span>Collaborations académiques</span>
-              </div>
+              <div class="availability-item"><span class="status available"></span><span>Stage / alternance</span></div>
+              <div class="availability-item"><span class="status available"></span><span>Freelance / missions</span></div>
+              <div class="availability-item"><span class="status available"></span><span>Collaboration académique</span></div>
             </div>
           </div>
-          
+
           <div class="contact-form-container">
             <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
               <h2>Envoyez-moi un message</h2>
-              
+
               <div class="form-group">
                 <label for="name">Nom complet *</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
-                  [(ngModel)]="formData.name"
-                  required
-                  #name="ngModel"
-                  class="form-control"
-                  [class.error]="name.invalid && name.touched"
-                >
-                <div class="error-message" *ngIf="name.invalid && name.touched">
-                  Le nom est requis
-                </div>
+                <input type="text" id="name" name="name" [(ngModel)]="formData.name" required #name="ngModel" class="form-control" [class.error]="name.invalid && name.touched">
+                <div class="error-message" *ngIf="name.invalid && name.touched">Le nom est requis</div>
               </div>
-              
+
               <div class="form-group">
                 <label for="email">Email *</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  [(ngModel)]="formData.email"
-                  required
-                  email
-                  #email="ngModel"
-                  class="form-control"
-                  [class.error]="email.invalid && email.touched"
-                >
+                <input type="email" id="email" name="email" [(ngModel)]="formData.email" required email #email="ngModel" class="form-control" [class.error]="email.invalid && email.touched">
                 <div class="error-message" *ngIf="email.invalid && email.touched">
                   <span *ngIf="email.errors?.['required']">L'email est requis</span>
                   <span *ngIf="email.errors?.['email']">Format d'email invalide</span>
                 </div>
               </div>
-              
+
               <div class="form-group">
                 <label for="company">Entreprise / Organisation</label>
-                <input 
-                  type="text" 
-                  id="company" 
-                  name="company" 
-                  [(ngModel)]="formData.company"
-                  class="form-control"
-                >
+                <input type="text" id="company" name="company" [(ngModel)]="formData.company" class="form-control">
               </div>
-              
+
               <div class="form-group">
                 <label for="subject">Sujet *</label>
-                <select 
-                  id="subject" 
-                  name="subject" 
-                  [(ngModel)]="formData.subject"
-                  required
-                  #subject="ngModel"
-                  class="form-control"
-                  [class.error]="subject.invalid && subject.touched"
-                >
+                <select id="subject" name="subject" [(ngModel)]="formData.subject" required #subject="ngModel" class="form-control" [class.error]="subject.invalid && subject.touched">
                   <option value="">Sélectionnez un sujet</option>
                   <option value="stage">Opportunité de stage</option>
                   <option value="alternance">Alternance</option>
@@ -152,41 +109,21 @@ import { FormsModule } from '@angular/forms';
                   <option value="collaboration">Collaboration</option>
                   <option value="autre">Autre</option>
                 </select>
-                <div class="error-message" *ngIf="subject.invalid && subject.touched">
-                  Veuillez sélectionner un sujet
-                </div>
+                <div class="error-message" *ngIf="subject.invalid && subject.touched">Veuillez sélectionner un sujet</div>
               </div>
-              
+
               <div class="form-group">
                 <label for="message">Message *</label>
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  [(ngModel)]="formData.message"
-                  required
-                  #message="ngModel"
-                  rows="6"
-                  class="form-control"
-                  [class.error]="message.invalid && message.touched"
-                  placeholder="Décrivez votre projet, vos besoins ou votre proposition..."
-                ></textarea>
-                <div class="error-message" *ngIf="message.invalid && message.touched">
-                  Le message est requis
-                </div>
+                <textarea id="message" name="message" [(ngModel)]="formData.message" required #message="ngModel" rows="6" class="form-control" [class.error]="message.invalid && message.touched" placeholder="Décrivez votre projet, vos besoins ou votre proposition..."></textarea>
+                <div class="error-message" *ngIf="message.invalid && message.touched">Le message est requis</div>
               </div>
-              
-              <button 
-                type="submit" 
-                class="btn btn-primary"
-                [disabled]="contactForm.invalid || isSubmitting"
-              >
+
+              <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid || isSubmitting">
                 <span *ngIf="!isSubmitting">Envoyer le message</span>
                 <span *ngIf="isSubmitting">Envoi en cours...</span>
               </button>
-              
-              <div class="success-message" *ngIf="isSubmitted">
-                ✅ Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
-              </div>
+
+              <div class="success-message" *ngIf="isSubmitted">✅ Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.</div>
             </form>
           </div>
         </div>
@@ -198,187 +135,187 @@ import { FormsModule } from '@angular/forms';
       padding: 4rem 0;
       background: #f8fafc;
     }
-    
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 2rem;
     }
-    
+
     .contact-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
     }
-    
+
     .contact-info h1 {
-      font-size: 3rem;
-      color: #1e293b;
+      font-size: clamp(2.4rem, 4vw, 3rem);
+      color: #0f172a;
       margin-bottom: 1rem;
     }
-    
+
     .contact-description {
-      font-size: 1.1rem;
-      color: #64748b;
-      line-height: 1.6;
-      margin-bottom: 3rem;
+      font-size: 1.08rem;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
     }
-    
+
     .contact-methods {
-      margin-bottom: 3rem;
+      margin-bottom: 2.8rem;
     }
-    
+
     .contact-method {
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin-bottom: 2rem;
-      padding: 1.5rem;
+      margin-bottom: 1.2rem;
+      padding: 1.2rem 1.4rem;
       background: white;
       border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
     }
-    
+
     .method-icon {
-      background: #2563eb;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
       color: white;
-      padding: 1rem;
-      border-radius: 0.5rem;
+      padding: 0.9rem;
+      border-radius: 0.7rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      min-width: 48px;
     }
-    
+
     .method-details h3 {
-      color: #1e293b;
+      color: #0f172a;
       margin-bottom: 0.25rem;
-      font-size: 1.1rem;
+      font-size: 1.08rem;
     }
-    
+
     .method-details p {
-      color: #64748b;
+      color: #475569;
       margin: 0;
+      line-height: 1.5;
     }
-    
+
     .availability {
       background: white;
-      padding: 2rem;
+      padding: 1.5rem 1.25rem;
       border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: 1px solid #e2e8f0;
     }
-    
+
     .availability h3 {
-      color: #1e293b;
+      color: #0f172a;
       margin-bottom: 1rem;
     }
-    
+
     .availability-item {
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      margin-bottom: 0.75rem;
-      color: #374151;
+      margin-bottom: 0.7rem;
+      color: #334155;
     }
-    
+
     .status {
       width: 12px;
       height: 12px;
       border-radius: 50%;
-    }
-    
-    .status.available {
       background: #10b981;
+      display: inline-block;
     }
-    
+
     .contact-form-container {
       background: white;
       padding: 2rem;
       border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
       height: fit-content;
     }
-    
+
     .contact-form h2 {
-      color: #1e293b;
+      color: #0f172a;
       margin-bottom: 2rem;
-      font-size: 1.5rem;
+      font-size: 1.55rem;
     }
-    
+
     .form-group {
       margin-bottom: 1.5rem;
     }
-    
+
     .form-group label {
       display: block;
-      color: #374151;
-      font-weight: 500;
+      color: #334155;
+      font-weight: 600;
       margin-bottom: 0.5rem;
     }
-    
+
     .form-control {
       width: 100%;
-      padding: 0.75rem;
-      border: 2px solid #e2e8f0;
-      border-radius: 0.5rem;
+      padding: 0.8rem 0.9rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 0.7rem;
       font-size: 1rem;
-      transition: border-color 0.3s;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
       box-sizing: border-box;
     }
-    
+
     .form-control:focus {
       outline: none;
       border-color: #2563eb;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
     }
-    
+
     .form-control.error {
       border-color: #ef4444;
     }
-    
+
     .error-message {
-      color: #ef4444;
-      font-size: 0.875rem;
-      margin-top: 0.25rem;
+      color: #dc2626;
+      font-size: 0.86rem;
+      margin-top: 0.35rem;
     }
-    
+
     .btn {
       width: 100%;
-      padding: 1rem;
-      background: #2563eb;
+      padding: 0.95rem 1rem;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
       color: white;
       border: none;
-      border-radius: 0.5rem;
+      border-radius: 0.75rem;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
-    
+
     .btn:hover:not(:disabled) {
-      background: #1d4ed8;
+      transform: translateY(-2px);
     }
-    
+
     .btn:disabled {
-      background: #94a3b8;
+      opacity: 0.7;
       cursor: not-allowed;
     }
-    
+
     .success-message {
       background: #dcfce7;
       color: #166534;
-      padding: 1rem;
-      border-radius: 0.5rem;
+      padding: 0.9rem 1rem;
+      border-radius: 0.7rem;
       margin-top: 1rem;
       text-align: center;
+      font-weight: 600;
     }
-    
+
     @media (max-width: 768px) {
       .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
-      }
-      
-      .contact-info h1 {
-        font-size: 2rem;
       }
     }
   `]
@@ -391,19 +328,17 @@ export class ContactComponent {
     subject: '',
     message: ''
   };
-  
+
   isSubmitting = false;
   isSubmitted = false;
-  
+
   onSubmit() {
     this.isSubmitting = true;
-    
-    // Simulation d'envoi (remplacer par vraie logique d'envoi)
+
     setTimeout(() => {
       this.isSubmitting = false;
       this.isSubmitted = true;
-      
-      // Reset form après 3 secondes
+
       setTimeout(() => {
         this.isSubmitted = false;
         this.formData = {

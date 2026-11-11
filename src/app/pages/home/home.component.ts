@@ -1,35 +1,53 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
+  imports: [RouterLink],
   template: `
     <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1>Kanté Moussa</h1>
-          <h2>Développeur Backend & Data Engineer</h2>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Backend • Data • Cloud/DevOps</p>
+          <h1>Moussa KANTÉ</h1>
+          <h2>Développeur Backend, Data & Cloud/DevOps Engineer</h2>
           <p class="hero-description">
-            Étudiant M1 BIHAR passionné par le développement backend, la data science et l'intelligence artificielle. 
-            Spécialisé dans la création d'applications interactives et de systèmes intelligents.
+            Ingénieur logiciel spécialisé en architectures backend résilientes, sécurité applicative,
+            pipelines CI/CD et pipelines de données. Actuellement en Master 2 BIHAR, entre ESATIC
+            (Abidjan) et ESTIA (Biarritz), je conçois des solutions cloud fiables et orientées
+            impact business.
           </p>
+
           <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-            <a href="/contact" class="btn btn-secondary">Me contacter</a>
+            <a routerLink="/projects" class="btn btn-primary">Voir mes projets</a>
+            <a routerLink="/contact" class="btn btn-secondary">Me contacter</a>
           </div>
-          <div class="social-links">
-            <a href="https://github.com/lelemoussa" target="_blank" aria-label="GitHub">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/kante-moussa-7994a2285/" target="_blank" aria-label="LinkedIn">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a>
+
+          <div class="pill-list" aria-label="Compétences clés">
+            <span>GCP</span>
+            <span>Terraform</span>
+            <span>GitHub Actions</span>
+            <span>NestJS</span>
+            <span>PostgreSQL</span>
+            <span>IA agentique</span>
           </div>
         </div>
+
+        <aside class="hero-card">
+          <div class="stat-block">
+            <strong>+4</strong>
+            <span>ans d'expérience concrets</span>
+          </div>
+          <div class="stat-block">
+            <strong>7</strong>
+            <span>projets backend &amp; cloud réalisés</span>
+          </div>
+          <div class="stat-block">
+            <strong>GCP</strong>
+            <span>Cloud Run, GKE, Compute Engine, Cloud SQL</span>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -38,31 +56,38 @@ import { Component } from '@angular/core';
         <h3>Compétences techniques</h3>
         <div class="skills-grid">
           <div class="skill-category">
-            <h4>Backend & Data</h4>
+            <h4>Backend &amp; Sécurité</h4>
             <div class="skill-tags">
-              <span class="tag">Python</span>
               <span class="tag">NestJS</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">GraphQL</span>
-              <span class="tag">Prisma</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h4>Frontend</h4>
-            <div class="skill-tags">
-              <span class="tag">Angular</span>
-              <span class="tag">React</span>
+              <span class="tag">Django</span>
               <span class="tag">TypeScript</span>
-              <span class="tag">PWA</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">JWT</span>
+              <span class="tag">RBAC</span>
             </div>
           </div>
+
           <div class="skill-category">
-            <h4>Cloud & Tools</h4>
+            <h4>Data &amp; IA</h4>
             <div class="skill-tags">
-              <span class="tag">Supabase</span>
-              <span class="tag">Google Cloud</span>
-              <span class="tag">Git</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Prisma</span>
+              <span class="tag">Oracle</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Big Data</span>
+              <span class="tag">IA agentique</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4>Cloud &amp; DevOps</h4>
+            <div class="skill-tags">
+              <span class="tag">GCP</span>
+              <span class="tag">Terraform</span>
               <span class="tag">Docker</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Cloud Run</span>
+              <span class="tag">GKE</span>
             </div>
           </div>
         </div>
@@ -71,149 +96,201 @@ import { Component } from '@angular/core';
   `,
   styles: [`
     .hero {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 45%, #7c3aed 100%);
       color: white;
-      padding: 6rem 0;
-      text-align: center;
+      padding: 5rem 0 4rem;
     }
-    
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 2rem;
     }
-    
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 0.5rem;
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.5rem 0.9rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       font-weight: 700;
     }
-    
+
+    .hero h1 {
+      font-size: clamp(2.7rem, 4vw, 4rem);
+      margin-bottom: 0.75rem;
+      line-height: 1.08;
+    }
+
     .hero h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-      opacity: 0.9;
-      font-weight: 400;
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+      margin-bottom: 1rem;
+      color: #dbeafe;
+      font-weight: 500;
     }
-    
+
     .hero-description {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      line-height: 1.6;
-      opacity: 0.9;
-    }
-    
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
+      max-width: 660px;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
       margin-bottom: 2rem;
     }
-    
-    .btn {
-      padding: 0.75rem 2rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s;
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
     }
-    
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.6rem;
+      border-radius: 0.8rem;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.2);
+      text-decoration: none;
+    }
+
     .btn-primary {
       background: white;
-      color: #667eea;
+      color: #1d4ed8;
     }
-    
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-    
+
     .btn-secondary {
       background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.6);
       color: white;
-      border: 2px solid white;
     }
-    
-    .btn-secondary:hover {
-      background: white;
-      color: #667eea;
-    }
-    
-    .social-links {
+
+    .pill-list {
       display: flex;
-      gap: 1rem;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.7rem;
     }
-    
-    .social-links a {
+
+    .pill-list span {
+      padding: 0.55rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.8rem;
+      color: #e2e8f0;
+    }
+
+    .hero-card {
+      background: rgba(15, 23, 42, 0.32);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2);
+    }
+
+    .stat-block {
+      display: grid;
+      gap: 0.35rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .stat-block:last-child {
+      border-bottom: none;
+    }
+
+    .stat-block strong {
+      font-size: 2rem;
       color: white;
-      opacity: 0.8;
-      transition: opacity 0.3s;
     }
-    
-    .social-links a:hover {
-      opacity: 1;
+
+    .stat-block span {
+      color: #dbeafe;
+      line-height: 1.5;
     }
-    
+
     .skills {
-      padding: 4rem 0;
+      padding: 4.5rem 0;
       background: #f8fafc;
     }
-    
+
     .skills h3 {
       text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      color: #1e293b;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin-bottom: 2.5rem;
+      color: #0f172a;
     }
-    
+
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
     }
-    
+
     .skill-category {
       background: white;
       padding: 2rem;
       border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e2e8f0;
     }
-    
+
     .skill-category h4 {
-      color: #2563eb;
       margin-bottom: 1rem;
-      font-size: 1.25rem;
+      color: #1d4ed8;
+      font-size: 1.2rem;
     }
-    
+
     .skill-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.6rem;
     }
-    
+
     .tag {
-      background: #e2e8f0;
-      color: #475569;
-      padding: 0.5rem 1rem;
-      border-radius: 2rem;
-      font-size: 0.875rem;
-      font-weight: 500;
+      background: #e0f2fe;
+      color: #0f172a;
+      border: 1px solid #bfdbfe;
+      padding: 0.5rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
     }
-    
+
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
+      .hero {
+        padding-top: 4rem;
       }
-      
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
       .hero-buttons {
         flex-direction: column;
-        align-items: center;
       }
-      
-      .skills-grid {
-        grid-template-columns: 1fr;
+
+      .btn {
+        width: 100%;
       }
     }
   `]

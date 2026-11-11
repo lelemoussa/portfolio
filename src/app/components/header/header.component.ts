@@ -7,12 +7,14 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   imports: [RouterLink, RouterLinkActive],
   template: `
     <header class="header">
-      <nav class="nav">
-        <div class="nav-brand">
-          <h2>Kanté Moussa</h2>
-        </div>
+      <nav class="nav container">
+        <a class="nav-brand" routerLink="/" aria-label="Accueil">
+          <span class="brand-mark">MK</span>
+          <span>Moussa KANTÉ</span>
+        </a>
+
         <ul class="nav-links">
-          <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a></li>
+          <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a></li>
           <li><a routerLink="/about" routerLinkActive="active">À propos</a></li>
           <li><a routerLink="/projects" routerLinkActive="active">Projets</a></li>
           <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
@@ -22,28 +24,49 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   `,
   styles: [`
     .header {
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 100;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
     }
-    
-    .nav {
+
+    .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1rem 2rem;
+      padding: 0 2rem;
+    }
+
+    .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      min-height: 76px;
     }
-    
-    .nav-brand h2 {
-      color: #2563eb;
-      margin: 0;
-      font-weight: 600;
+
+    .nav-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+      color: #f8fafc;
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
-    
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.7rem;
+      background: linear-gradient(135deg, #60a5fa, #8b5cf6);
+      color: white;
+      font-size: 0.8rem;
+    }
+
     .nav-links {
       display: flex;
       list-style: none;
@@ -51,26 +74,30 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       padding: 0;
       gap: 2rem;
     }
-    
+
     .nav-links a {
       text-decoration: none;
-      color: #64748b;
-      font-weight: 500;
-      transition: color 0.3s;
+      color: #cbd5e1;
+      font-weight: 600;
+      transition: color 0.2s ease;
     }
-    
+
     .nav-links a:hover,
     .nav-links a.active {
-      color: #2563eb;
+      color: #ffffff;
     }
-    
+
     @media (max-width: 768px) {
       .nav {
+        flex-direction: column;
         padding: 1rem;
+        gap: 0.8rem;
       }
-      
+
       .nav-links {
         gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }
   `]

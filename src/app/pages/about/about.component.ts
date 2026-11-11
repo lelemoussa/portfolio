@@ -9,107 +9,99 @@ import { Component } from '@angular/core';
         <div class="about-content">
           <div class="about-text">
             <h1>À propos de moi</h1>
-            <div class="intro">
+
+            <div class="intro card">
               <p>
-                Bonjour ! Je suis <strong>Kanté Moussa</strong>, étudiant en Master 1 BIHAR 
-                (Big Data, Intelligence Artificielle, Réalité Augmentée) passionné par le développement 
-                backend et la data science.
-              </p>
-            </div>
-            
-            <div class="section">
-              <h2>Mon parcours</h2>
-              <p>
-                Actuellement en M1 BIHAR, je me spécialise dans les technologies backend modernes, 
-                l'analyse de données et l'intelligence artificielle. Mon approche combine rigueur 
-                technique et créativité pour développer des solutions innovantes.
+                Je suis <strong>Moussa KANTÉ</strong>, ingénieur logiciel spécialisé en
+                <strong>Backend</strong>, <strong>Data Engineering</strong> et
+                <strong>Cloud/DevOps</strong>. Passionné par les architectures résilientes,
+                la sécurité applicative et l'automatisation de bout en bout, je conçois des
+                solutions fiables pour des environnements à forte exigence comme les fintech,
+                e-commerce et la logistique.
               </p>
             </div>
 
-            <div class="section">
-              <h2>Mes valeurs</h2>
-              <div class="values-grid">
-                <div class="value-item">
-                  <h3>🎯 Sérieux</h3>
-                  <p>Engagement total dans chaque projet avec une approche méthodique et professionnelle.</p>
+            <div class="section card">
+              <h2>Mon parcours</h2>
+              <p>
+                Actuellement étudiant en <strong>Master 2 BIHAR</strong> à l'ESATIC et à l'ESTIA
+                Biarritz, j'ai développé un socle solide en architecture logicielle, gestion de
+                données massives, cloud computing et intelligence artificielle. Mon expérience chez
+                <strong>Yoomi-Solution</strong> m'a permis de travailler sur des systèmes critiques,
+                sécurisés et déployés sur GCP avec des pipelines CI/CD industrialisés.
+              </p>
+            </div>
+
+            <div class="section card">
+              <h2>Mes domaines d'expertise</h2>
+              <div class="expertise-areas">
+                <div class="area">
+                  <h3>Backend &amp; sécurité</h3>
+                  <p>NestJS, Django, APIs REST, JWT, RBAC, Zero-Trust, protection anti-bruteforce.</p>
                 </div>
-                <div class="value-item">
-                  <h3>🤝 Respect</h3>
-                  <p>Collaboration bienveillante et écoute active au sein des équipes de développement.</p>
+                <div class="area">
+                  <h3>Cloud &amp; IaC</h3>
+                  <p>GCP, Cloud Run, GKE, Terraform, Cloud SQL, Workload Identity Federation.</p>
                 </div>
-                <div class="value-item">
-                  <h3>💡 Honnêteté</h3>
-                  <p>Transparence dans la communication et reconnaissance de mes limites pour mieux progresser.</p>
+                <div class="area">
+                  <h3>Data &amp; IA</h3>
+                  <p>PostgreSQL, Prisma, Oracle, stockage distribué, IA agentique et automatisation.</p>
                 </div>
-                <div class="value-item">
-                  <h3>🚀 Innovation</h3>
-                  <p>Curiosité constante pour les nouvelles technologies et les meilleures pratiques.</p>
+                <div class="area">
+                  <h3>CI/CD &amp; DevOps</h3>
+                  <p>GitHub Actions, Docker, déploiement zero-downtime, tests automatisés et qualité.</p>
                 </div>
               </div>
             </div>
 
-            <div class="section">
-              <h2>Mes objectifs</h2>
-              <p>
-                Mon ambition est de devenir <strong>Backend Engineer / Data Engineer</strong> spécialisé 
-                dans les systèmes intelligents pour l'éducation et la culture. Je souhaite contribuer 
-                à des projets qui ont un impact positif sur la société, en particulier dans la 
-                valorisation du patrimoine culturel et l'accessibilité de l'éducation.
-              </p>
-            </div>
-
-            <div class="section">
-              <h2>Domaines d'expertise</h2>
-              <div class="expertise-areas">
-                <div class="area">
-                  <h3>Backend Development</h3>
-                  <p>Architecture d'APIs robustes, gestion de bases de données, authentification et sécurité.</p>
+            <div class="section card">
+              <h2>Mes valeurs</h2>
+              <div class="values-grid">
+                <div class="value-item">
+                  <h3>🎯 Rigueur</h3>
+                  <p>Approche méthodique et orientée qualité pour chaque solution produite.</p>
                 </div>
-                <div class="area">
-                  <h3>Data Science & IA</h3>
-                  <p>Analyse de données, machine learning, traitement du signal numérique.</p>
+                <div class="value-item">
+                  <h3>🤝 Collaboration</h3>
+                  <p>Travail en équipe, écoute active et transmission claire des bonnes pratiques.</p>
                 </div>
-                <div class="area">
-                  <h3>Applications Interactives</h3>
-                  <p>PWA, bornes tactiles, interfaces utilisateur innovantes et accessibles.</p>
+                <div class="value-item">
+                  <h3>💡 Innovation</h3>
+                  <p>Curiosité constante pour les nouvelles technologies et les usages utiles.</p>
                 </div>
-                <div class="area">
-                  <h3>Cryptographie & Sécurité</h3>
-                  <p>Chiffrement, authentification sécurisée, protection des données sensibles.</p>
+                <div class="value-item">
+                  <h3>🚀 Impact</h3>
+                  <p>Conception d'outils favorisants la fiabilité, la sécurité et la performance.</p>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div class="about-sidebar">
-            <div class="profile-card">
+
+          <aside class="about-sidebar">
+            <div class="profile-card card">
               <div class="profile-info">
-                <h3>Kanté Moussa</h3>
-                <p class="title">Développeur Backend & Data</p>
-                <p class="education">M1 BIHAR</p>
+                <h3>Moussa KANTÉ</h3>
+                <p class="title">Backend, Data &amp; Cloud/DevOps Engineer</p>
+                <p class="education">Master 2 BIHAR — ESATIC / ESTIA Biarritz</p>
               </div>
-              
+
               <div class="contact-info">
-                <h4>Contact</h4>
+                <h4>Profil</h4>
                 <div class="contact-item">
                   <span class="label">Email:</span>
                   <span class="value">lelemoussa12@gmail.com</span>
                 </div>
                 <div class="contact-item">
                   <span class="label">Localisation:</span>
-                  <span class="value">Abidjan, Marcory - Côte d'Ivoire</span>
-                </div>
-                <div class="contact-item">
-                  <span class="label">Âge:</span>
-                  <span class="value">27 ans</span>
-                </div>
-                <div class="contact-item">
-                  <span class="label">Situation:</span>
-                  <span class="value">Célibataire</span>
+                  <span class="value">Abidjan, Côte d'Ivoire</span>
                 </div>
                 <div class="contact-item">
                   <span class="label">Statut:</span>
-                  <span class="value">Étudiant M1, recherche stage/alternance</span>
+                  <span class="value">Étudiant + expérience professionnelle</span>
+                </div>
+                <div class="contact-item">
+                  <span class="label">Disponibilité:</span>
+                  <span class="value">Stage / alternance / freelance</span>
                 </div>
               </div>
 
@@ -117,33 +109,25 @@ import { Component } from '@angular/core';
                 <h4>Compétences principales</h4>
                 <div class="skill-bars">
                   <div class="skill-bar">
-                    <span class="skill-name">Python</span>
-                    <div class="bar">
-                      <div class="progress" style="width: 85%"></div>
-                    </div>
+                    <span class="skill-name">GCP &amp; DevOps</span>
+                    <div class="bar"><div class="progress" style="width: 90%"></div></div>
                   </div>
                   <div class="skill-bar">
-                    <span class="skill-name">NestJS/Node.js</span>
-                    <div class="bar">
-                      <div class="progress" style="width: 80%"></div>
-                    </div>
+                    <span class="skill-name">NestJS / Python</span>
+                    <div class="bar"><div class="progress" style="width: 88%"></div></div>
                   </div>
                   <div class="skill-bar">
-                    <span class="skill-name">PostgreSQL</span>
-                    <div class="bar">
-                      <div class="progress" style="width: 75%"></div>
-                    </div>
+                    <span class="skill-name">Terraform</span>
+                    <div class="bar"><div class="progress" style="width: 82%"></div></div>
                   </div>
                   <div class="skill-bar">
-                    <span class="skill-name">Angular/React</span>
-                    <div class="bar">
-                      <div class="progress" style="width: 70%"></div>
-                    </div>
+                    <span class="skill-name">PostgreSQL / Data</span>
+                    <div class="bar"><div class="progress" style="width: 80%"></div></div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -153,209 +137,161 @@ import { Component } from '@angular/core';
       padding: 4rem 0;
       background: #f8fafc;
     }
-    
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 2rem;
     }
-    
+
     .about-content {
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 3rem;
+      align-items: start;
     }
-    
+
     .about-text h1 {
-      font-size: 3rem;
-      color: #1e293b;
-      margin-bottom: 2rem;
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      color: #0f172a;
+      margin-bottom: 1.5rem;
     }
-    
-    .intro {
+
+    .card {
       background: white;
-      padding: 2rem;
+      border: 1px solid #e2e8f0;
       border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    .intro {
+      padding: 2rem;
       margin-bottom: 2rem;
       border-left: 4px solid #2563eb;
     }
-    
-    .intro p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #374151;
-      margin: 0;
+
+    .intro p,
+    .section p,
+    .value-item p,
+    .area p,
+    .contact-item,
+    .skill-name {
+      color: #475569;
+      line-height: 1.7;
     }
-    
+
     .section {
-      background: white;
       padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       margin-bottom: 2rem;
     }
-    
+
     .section h2 {
-      color: #2563eb;
+      color: #1d4ed8;
       margin-bottom: 1rem;
       font-size: 1.5rem;
     }
-    
-    .section p {
-      color: #64748b;
-      line-height: 1.6;
-      margin: 0;
-    }
-    
+
+    .expertise-areas,
     .values-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.25rem;
     }
-    
+
+    .area,
+    .value-item {
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 0.8rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    .area h3,
     .value-item h3 {
-      color: #374151;
       margin-bottom: 0.5rem;
-      font-size: 1.1rem;
+      color: #0f172a;
     }
-    
-    .value-item p {
-      font-size: 0.9rem;
-      margin: 0;
-    }
-    
-    .expertise-areas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    
-    .area {
-      padding: 1.5rem;
-      background: #f1f5f9;
-      border-radius: 0.5rem;
-    }
-    
-    .area h3 {
-      color: #2563eb;
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-    }
-    
-    .area p {
-      font-size: 0.9rem;
-      margin: 0;
-    }
-    
+
     .profile-card {
-      background: white;
-      border-radius: 1rem;
       padding: 2rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 2rem;
     }
-    
+
     .profile-info {
-      text-align: center;
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
       border-bottom: 1px solid #e2e8f0;
     }
-    
+
     .profile-info h3 {
-      color: #1e293b;
+      color: #0f172a;
       margin-bottom: 0.5rem;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
-    
+
     .title {
       color: #2563eb;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
     }
-    
+
     .education {
-      color: #64748b;
-      font-size: 0.9rem;
+      color: #475569;
       margin: 0;
     }
-    
-    .contact-info,
-    .skills-summary {
-      margin-bottom: 2rem;
+
+    .contact-info {
+      margin-bottom: 1.5rem;
     }
-    
+
     .contact-info h4,
     .skills-summary h4 {
-      color: #374151;
-      margin-bottom: 1rem;
+      color: #0f172a;
+      margin-bottom: 0.9rem;
       font-size: 1.1rem;
     }
-    
+
     .contact-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
+      display: grid;
+      gap: 0.15rem;
+      margin-bottom: 0.75rem;
     }
-    
+
     .label {
-      color: #64748b;
-      font-weight: 500;
+      font-weight: 700;
+      color: #1e293b;
     }
-    
-    .value {
-      color: #374151;
-      text-align: right;
+
+    .skill-bars {
+      display: grid;
+      gap: 1rem;
     }
-    
+
     .skill-bar {
-      margin-bottom: 1rem;
+      display: grid;
+      gap: 0.35rem;
     }
-    
-    .skill-name {
-      display: block;
-      color: #374151;
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-    }
-    
+
     .bar {
+      width: 100%;
+      height: 0.7rem;
+      border-radius: 999px;
       background: #e2e8f0;
-      height: 8px;
-      border-radius: 4px;
       overflow: hidden;
     }
-    
+
     .progress {
-      background: linear-gradient(90deg, #2563eb, #3b82f6);
       height: 100%;
-      border-radius: 4px;
-      transition: width 0.3s ease;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
     }
-    
-    @media (max-width: 768px) {
+
+    @media (max-width: 900px) {
       .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      
-      .about-text h1 {
-        font-size: 2rem;
-      }
-      
-      .values-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .expertise-areas {
         grid-template-columns: 1fr;
       }
     }
   `]
 })
 export class AboutComponent {}
+
