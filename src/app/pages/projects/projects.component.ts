@@ -6,136 +6,171 @@ import { Component } from '@angular/core';
   template: `
     <section class="projects">
       <div class="container">
-        <h1>Mes Projets</h1>
+        <h1>Mes réalisations</h1>
         <p class="section-description">
-          Découvrez mes réalisations en développement backend, data science et applications interactives.
+          Des projets orientés backend, sécurité, cloud et data, construits pour résoudre des
+          problèmes réels avec une vraie valeur métier.
         </p>
-        
+
         <div class="projects-grid">
-          <!-- Projet 1: Plateforme FinTech -->
-          <div class="project-card featured">
+          <article class="project-card featured">
             <div class="project-header">
-              <h3>Plateforme d'Investissement Participatif</h3>
-              <span class="project-type">FinTech • Backend</span>
+              <h3>Payment Gateway Backend</h3>
+              <span class="project-type">Fintech • Sécurité critique</span>
             </div>
             <p class="project-description">
-              Plateforme complète permettant aux investisseurs de financer des projets avec gestion des paiements, 
-              authentification avancée (2FA), KYC, et marché secondaire.
+              Durcissement complet de l'authentification admin avec génération sécurisée de mots de
+              passe temporaires, JWT dynamique, verrouillage anti-bruteforce et workflow de première
+              connexion obligatoire.
             </p>
             <div class="project-features">
-              <h4>Fonctionnalités clés :</h4>
+              <h4>Réalisations clés</h4>
               <ul>
-                <li>Authentification JWT + OAuth (Google, Facebook, Apple)</li>
-                <li>Système 2FA avec OTP (Speakeasy)</li>
-                <li>Gestion des rôles et KYC investisseurs</li>
-                <li>Intégration Stripe et Mobile Money</li>
-                <li>Notifications multi-canal (push, email)</li>
-                <li>Back-office administrateur complet</li>
+                <li>Politique Zero-Trust et règle de mot de passe renforcée</li>
+                <li>Blocage temporaire du compte après 5 échecs consécutifs</li>
+                <li>Protection des routes avec garde JWT et obligation de changement de mot de passe</li>
+                <li>Notifications de sécurité envoyées via Brevo sécurisé</li>
               </ul>
             </div>
             <div class="tech-stack">
               <span class="tech">NestJS</span>
-              <span class="tech">GraphQL</span>
-              <span class="tech">Prisma</span>
+              <span class="tech">TypeScript</span>
+              <span class="tech">JWT</span>
               <span class="tech">PostgreSQL</span>
-              <span class="tech">Angular</span>
-              <span class="tech">Stripe</span>
-              <span class="tech">GCS</span>
+              <span class="tech">Brevo</span>
             </div>
-            <div class="project-links">
-              <a href="#" class="btn btn-primary">Voir le code</a>
-              <a href="#" class="btn btn-secondary">Démo</a>
-            </div>
-          </div>
+          </article>
 
-          <!-- Projet 2: CultivOire -->
-          <div class="project-card">
+          <article class="project-card">
             <div class="project-header">
-              <h3>CultivOire - Borne Interactive Culturelle</h3>
+              <h3>Automatisation Cloud &amp; CI/CD</h3>
+              <span class="project-type">Cloud • DevOps</span>
+            </div>
+            <p class="project-description">
+              Provisioning Terraform sur GCP et pipelines GitHub Actions pour déploiement automatisé de
+              services backend avec sécurité renforcée et zéro-downtime.
+            </p>
+            <div class="project-features">
+              <h4>Points forts</h4>
+              <ul>
+                <li>Provisioning de Cloud Run, Cloud SQL, Cloud Storage, IAM et firewall</li>
+                <li>Remote state sécurisé et verrouillage de concurrence</li>
+                <li>Build, tests, scan et déploiement via GitHub Actions</li>
+                <li>Authentification OIDC sans secret long terme</li>
+              </ul>
+            </div>
+            <div class="tech-stack">
+              <span class="tech">GCP</span>
+              <span class="tech">Terraform</span>
+              <span class="tech">GitHub Actions</span>
+              <span class="tech">Docker</span>
+              <span class="tech">Cloud Run</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Youmpi Delivery Backend</h3>
+              <span class="project-type">Logistique • Backend</span>
+            </div>
+            <p class="project-description">
+              Conception d'un service de notifications transactionnelles et de validation d'identité,
+              avec flux de livraison, sécurité des clés et industrialisation via conteneurs.
+            </p>
+            <div class="project-features">
+              <h4>Livrables</h4>
+              <ul>
+                <li>Service d'envoi d'e-mails transactionnels centralisé</li>
+                <li>Codes de validation à durée limitée</li>
+                <li>Notifications critiques sur événements de livraison</li>
+                <li>Environnement de dev isolé avec Docker</li>
+              </ul>
+            </div>
+            <div class="tech-stack">
+              <span class="tech">NestJS</span>
+              <span class="tech">PostgreSQL</span>
+              <span class="tech">Docker</span>
+              <span class="tech">Brevo</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Stonivest Backend</h3>
+              <span class="project-type">Finance • Communications</span>
+            </div>
+            <p class="project-description">
+              Mise en place d'un service de mailing transactionnel multi-templates pour onboarding,
+              confirmations d'opérations et alertes de sécurité.
+            </p>
+            <div class="project-features">
+              <h4>Aspects techniques</h4>
+              <ul>
+                <li>Modélisation des flux de notification métier</li>
+                <li>Standardisation des secrets et variables d'environnement</li>
+                <li>Règles de sécurité pour les API tierces</li>
+                <li>Gestion multi-templates et standardisation</li>
+              </ul>
+            </div>
+            <div class="tech-stack">
+              <span class="tech">Node.js</span>
+              <span class="tech">REST</span>
+              <span class="tech">PostgreSQL</span>
+              <span class="tech">Security</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>CultivOire</h3>
               <span class="project-type">Hackathon • PWA</span>
             </div>
             <p class="project-description">
-              Application PWA pour bornes interactives valorisant la culture ivoirienne avec 6 modules éducatifs, 
-              quiz interactifs et assistant vocal.
+              Kiosque interactif culturel et touristique ivoirien combinant interface reactive,
+              données Supabase et modules audio multilingues.
             </p>
             <div class="project-features">
-              <h4>Réalisations :</h4>
+              <h4>Réalisations</h4>
               <ul>
-                <li>Interface tactile optimisée pour bornes</li>
-                <li>6 modules culturels interactifs</li>
-                <li>Système de quiz avec scoring</li>
-                <li>Assistant vocal intégré</li>
-                <li>Sauvegarde de progression utilisateur</li>
-                <li>Architecture PWA responsive</li>
+                <li>Interface tactile pour borne interactive</li>
+                <li>Quiz, modules culturels et synthèse vocale</li>
+                <li>Stockage de données avec Supabase</li>
+                <li>2e prix au hackathon avec l'équipe K2TG</li>
               </ul>
             </div>
             <div class="tech-stack">
               <span class="tech">React</span>
               <span class="tech">PWA</span>
               <span class="tech">Supabase</span>
-              <span class="tech">PostgreSQL</span>
-              <span class="tech">Web Speech API</span>
+              <span class="tech">Web Speech</span>
             </div>
-            <div class="project-links">
-              <a href="#" class="btn btn-primary">Voir le projet</a>
-            </div>
-          </div>
+          </article>
 
-          <!-- Projet 3: Système de Notifications -->
-          <div class="project-card">
+          <article class="project-card">
             <div class="project-header">
-              <h3>Système de Notifications Intelligent</h3>
-              <span class="project-type">Backend • Microservice</span>
+              <h3>Koba Ferronnerie</h3>
+              <span class="project-type">E-commerce • B2B/B2C</span>
             </div>
             <p class="project-description">
-              Système multi-canal pour notifications push, email et internes avec typage avancé et 
-              historique complet des communications.
+              Plateforme de commerce avec gestion de catalogues, onboarding fournisseurs et
+              administration des commandes et produits.
             </p>
             <div class="project-features">
-              <h4>Architecture :</h4>
+              <h4>Fonctionnalités</h4>
               <ul>
-                <li>Notifications temps réel</li>
-                <li>Typage strict (NotificationType, SubType)</li>
-                <li>Mapping automatique des sous-types</li>
-                <li>Historique et traçabilité</li>
-                <li>Intégration multi-projets</li>
+                <li>Gestion de catalogues produits</li>
+                <li>Onboarding fournisseurs et workflows internes</li>
+                <li>Administration des commandes</li>
+                <li>Expérience client et opérateur claire</li>
               </ul>
             </div>
             <div class="tech-stack">
-              <span class="tech">NestJS</span>
-              <span class="tech">WebSockets</span>
-              <span class="tech">TypeScript</span>
-              <span class="tech">PostgreSQL</span>
+              <span class="tech">Web App</span>
+              <span class="tech">Backend</span>
+              <span class="tech">Commerce</span>
+              <span class="tech">Admin</span>
             </div>
-          </div>
-
-          <!-- Projet 4: Back-office Admin -->
-          <div class="project-card">
-            <div class="project-header">
-              <h3>Back-office Administrateur</h3>
-              <span class="project-type">Frontend • Dashboard</span>
-            </div>
-            <p class="project-description">
-              Interface de gestion complète avec authentification par rôles, gestion des projets, 
-              validation KYC et tableaux de bord analytiques.
-            </p>
-            <div class="project-features">
-              <h4>Modules :</h4>
-              <ul>
-                <li>Authentification multi-rôles</li>
-                <li>Gestion des investissements</li>
-                <li>Validation KYC automatisée</li>
-                <li>Pagination unifiée</li>
-                <li>GraphQL Resolvers Admin</li>
-              </ul>
-            </div>
-            <div class="tech-stack">
-              <span class="tech">Angular</span>
-              <span class="tech">GraphQL</span>
-              <span class="tech">TypeScript</span>
-              <span class="tech">RxJS</span>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -145,171 +180,104 @@ import { Component } from '@angular/core';
       padding: 4rem 0;
       background: #f8fafc;
     }
-    
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 2rem;
     }
-    
+
     h1 {
       text-align: center;
-      font-size: 3rem;
+      font-size: clamp(2.4rem, 4vw, 3.1rem);
       margin-bottom: 1rem;
-      color: #1e293b;
+      color: #0f172a;
     }
-    
+
     .section-description {
       text-align: center;
-      font-size: 1.1rem;
-      color: #64748b;
-      max-width: 600px;
+      font-size: 1.08rem;
+      color: #475569;
+      max-width: 700px;
       margin: 0 auto 3rem;
-      line-height: 1.6;
+      line-height: 1.7;
     }
-    
+
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
     }
-    
+
     .project-card {
       background: white;
-      border-radius: 1rem;
+      border-radius: 1.2rem;
       padding: 2rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e2e8f0;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    
+
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
     }
-    
+
     .project-card.featured {
       border-left: 4px solid #2563eb;
-      grid-column: span 2;
     }
-    
+
     .project-header {
       margin-bottom: 1rem;
     }
-    
+
     .project-header h3 {
-      color: #1e293b;
-      margin-bottom: 0.5rem;
-      font-size: 1.5rem;
+      color: #0f172a;
+      margin-bottom: 0.6rem;
+      font-size: 1.6rem;
     }
-    
+
     .project-type {
-      background: #e2e8f0;
-      color: #475569;
-      padding: 0.25rem 0.75rem;
-      border-radius: 1rem;
-      font-size: 0.875rem;
-      font-weight: 500;
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-size: 0.75rem;
+      font-weight: 700;
     }
-    
+
     .project-description {
-      color: #64748b;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 1.3rem;
     }
-    
-    .project-features {
-      margin-bottom: 1.5rem;
-    }
-    
+
     .project-features h4 {
-      color: #374151;
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
     }
-    
+
     .project-features ul {
-      list-style: none;
+      margin: 0 0 1.2rem 1.1rem;
       padding: 0;
-      margin: 0;
+      color: #475569;
+      line-height: 1.8;
     }
-    
-    .project-features li {
-      color: #64748b;
-      padding: 0.25rem 0;
-      position: relative;
-      padding-left: 1.5rem;
-    }
-    
-    .project-features li::before {
-      content: "✓";
-      color: #10b981;
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-    }
-    
+
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-bottom: 1.5rem;
     }
-    
+
     .tech {
-      background: #dbeafe;
-      color: #1e40af;
-      padding: 0.25rem 0.75rem;
-      border-radius: 1rem;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-    
-    .project-links {
-      display: flex;
-      gap: 1rem;
-    }
-    
-    .btn {
-      padding: 0.5rem 1.5rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
+      background: #e2e8f0;
+      color: #334155;
+      padding: 0.45rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
       font-weight: 600;
-      transition: all 0.3s;
-      text-align: center;
-    }
-    
-    .btn-primary {
-      background: #2563eb;
-      color: white;
-    }
-    
-    .btn-primary:hover {
-      background: #1d4ed8;
-    }
-    
-    .btn-secondary {
-      background: transparent;
-      color: #2563eb;
-      border: 2px solid #2563eb;
-    }
-    
-    .btn-secondary:hover {
-      background: #2563eb;
-      color: white;
-    }
-    
-    @media (max-width: 768px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .project-card.featured {
-        grid-column: span 1;
-      }
-      
-      h1 {
-        font-size: 2rem;
-      }
     }
   `]
 })
