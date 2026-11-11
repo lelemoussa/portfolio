@@ -6,125 +6,96 @@ import { Component } from '@angular/core';
   template: `
     <section class="about">
       <div class="container">
+        <div class="page-intro">
+          <p class="eyebrow"><span>01</span> À PROPOS</p>
+          <h1>La technique,<br /><em>au service du réel.</em></h1>
+          <p class="lead">
+            Je suis Moussa KANTÉ, ingénieur logiciel spécialisé en backend, data et cloud.
+            J'aime concevoir des systèmes fiables, sécurisés et simples à faire évoluer.
+          </p>
+        </div>
+
         <div class="about-content">
-          <div class="about-text">
-            <h1>À propos de moi</h1>
+          <div class="about-main">
+            <article class="story-block">
+              <span class="block-index">01 — PARCOURS</span>
+              <div>
+                <h2>De la donnée au produit.</h2>
+                <p>
+                  En Master 2 BIHAR à l'ESATIC et à l'ESTIA Biarritz, j'approfondis l'architecture
+                  logicielle, la gestion de données massives, le cloud computing et l'intelligence
+                  artificielle. Chez <strong>Yoomi-Solution</strong>, j'ai contribué à des systèmes
+                  sécurisés déployés sur GCP et à l'industrialisation de pipelines CI/CD.
+                </p>
+                <p>
+                  Mon approche relie les besoins métier aux choix techniques : bâtir des bases
+                  solides, automatiser ce qui peut l'être et livrer des solutions pensées pour
+                  celles et ceux qui les utilisent.
+                </p>
+              </div>
+            </article>
 
-            <div class="intro card">
-              <p>
-                Je suis <strong>Moussa KANTÉ</strong>, ingénieur logiciel spécialisé en
-                <strong>Backend</strong>, <strong>Data Engineering</strong> et
-                <strong>Cloud/DevOps</strong>. Passionné par les architectures résilientes,
-                la sécurité applicative et l'automatisation de bout en bout, je conçois des
-                solutions fiables pour des environnements à forte exigence comme les fintech,
-                e-commerce et la logistique.
-              </p>
-            </div>
-
-            <div class="section card">
-              <h2>Mon parcours</h2>
-              <p>
-                Actuellement étudiant en <strong>Master 2 BIHAR</strong> à l'ESATIC et à l'ESTIA
-                Biarritz, j'ai développé un socle solide en architecture logicielle, gestion de
-                données massives, cloud computing et intelligence artificielle. Mon expérience chez
-                <strong>Yoomi-Solution</strong> m'a permis de travailler sur des systèmes critiques,
-                sécurisés et déployés sur GCP avec des pipelines CI/CD industrialisés.
-              </p>
-            </div>
-
-            <div class="section card">
-              <h2>Mes domaines d'expertise</h2>
-              <div class="expertise-areas">
-                <div class="area">
+            <article class="expertise-block">
+              <div class="block-heading">
+                <span class="block-index">02 — EXPERTISES</span>
+                <h2>Des fondations<br /><em>à la mise en ligne.</em></h2>
+              </div>
+              <div class="expertise-grid">
+                <div class="expertise-card">
+                  <span class="expertise-number">01</span>
                   <h3>Backend &amp; sécurité</h3>
-                  <p>NestJS, Django, APIs REST, JWT, RBAC, Zero-Trust, protection anti-bruteforce.</p>
+                  <p>API robustes, authentification, autorisation et protection applicative.</p>
+                  <span class="tools">NestJS · Django · JWT · RBAC</span>
                 </div>
-                <div class="area">
-                  <h3>Cloud &amp; IaC</h3>
-                  <p>GCP, Cloud Run, GKE, Terraform, Cloud SQL, Workload Identity Federation.</p>
+                <div class="expertise-card">
+                  <span class="expertise-number">02</span>
+                  <h3>Cloud &amp; infrastructure</h3>
+                  <p>Infrastructures reproductibles, déploiements fiables et accès sécurisés.</p>
+                  <span class="tools">GCP · Terraform · Cloud Run · GKE</span>
                 </div>
-                <div class="area">
+                <div class="expertise-card">
+                  <span class="expertise-number">03</span>
                   <h3>Data &amp; IA</h3>
-                  <p>PostgreSQL, Prisma, Oracle, stockage distribué, IA agentique et automatisation.</p>
+                  <p>Modélisation, persistance et intégration de services intelligents.</p>
+                  <span class="tools">PostgreSQL · Prisma · Oracle · MongoDB</span>
                 </div>
-                <div class="area">
-                  <h3>CI/CD &amp; DevOps</h3>
-                  <p>GitHub Actions, Docker, déploiement zero-downtime, tests automatisés et qualité.</p>
+                <div class="expertise-card">
+                  <span class="expertise-number">04</span>
+                  <h3>DevOps &amp; qualité</h3>
+                  <p>Automatisation des livraisons, tests continus et pratiques de développement.</p>
+                  <span class="tools">GitHub Actions · Docker · CI/CD</span>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="section card">
-              <h2>Mes valeurs</h2>
-              <div class="values-grid">
-                <div class="value-item">
-                  <h3>🎯 Rigueur</h3>
-                  <p>Approche méthodique et orientée qualité pour chaque solution produite.</p>
-                </div>
-                <div class="value-item">
-                  <h3>🤝 Collaboration</h3>
-                  <p>Travail en équipe, écoute active et transmission claire des bonnes pratiques.</p>
-                </div>
-                <div class="value-item">
-                  <h3>💡 Innovation</h3>
-                  <p>Curiosité constante pour les nouvelles technologies et les usages utiles.</p>
-                </div>
-                <div class="value-item">
-                  <h3>🚀 Impact</h3>
-                  <p>Conception d'outils favorisants la fiabilité, la sécurité et la performance.</p>
-                </div>
+            <article class="values-block">
+              <span class="block-index">03 — PRINCIPES</span>
+              <h2>Ce qui guide mon travail.</h2>
+              <div class="values-list">
+                <p><span>01</span><strong>Rigueur</strong> — la qualité se construit à chaque étape.</p>
+                <p><span>02</span><strong>Collaboration</strong> — les bons produits sont des efforts d'équipe.</p>
+                <p><span>03</span><strong>Impact</strong> — la technologie doit résoudre un vrai problème.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <aside class="about-sidebar">
-            <div class="profile-card card">
-              <div class="profile-info">
-                <h3>Moussa KANTÉ</h3>
-                <p class="title">Backend, Data &amp; Cloud/DevOps Engineer</p>
-                <p class="education">Master 2 BIHAR — ESATIC / ESTIA Biarritz</p>
-              </div>
-
-              <div class="contact-info">
-                <h4>Profil</h4>
-                <div class="contact-item">
-                  <span class="label">Email:</span>
-                  <span class="value">lelemoussa12@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                  <span class="label">Localisation:</span>
-                  <span class="value">Abidjan, Côte d'Ivoire</span>
-                </div>
-                <div class="contact-item">
-                  <span class="label">Statut:</span>
-                  <span class="value">Étudiant + expérience professionnelle</span>
-                </div>
-                <div class="contact-item">
-                  <span class="label">Disponibilité:</span>
-                  <span class="value">Stage / alternance / freelance</span>
-                </div>
-              </div>
-
-              <div class="skills-summary">
-                <h4>Compétences principales</h4>
-                <div class="skill-bars">
-                  <div class="skill-bar">
-                    <span class="skill-name">GCP &amp; DevOps</span>
-                    <div class="bar"><div class="progress" style="width: 90%"></div></div>
-                  </div>
-                  <div class="skill-bar">
-                    <span class="skill-name">NestJS / Python</span>
-                    <div class="bar"><div class="progress" style="width: 88%"></div></div>
-                  </div>
-                  <div class="skill-bar">
-                    <span class="skill-name">Terraform</span>
-                    <div class="bar"><div class="progress" style="width: 82%"></div></div>
-                  </div>
-                  <div class="skill-bar">
-                    <span class="skill-name">PostgreSQL / Data</span>
-                    <div class="bar"><div class="progress" style="width: 80%"></div></div>
-                  </div>
-                </div>
+          <aside class="profile-card">
+            <div class="profile-top">
+              <div class="monogram">MK</div>
+              <span class="profile-status"><i></i> Ouvert aux opportunités</span>
+              <h2>Moussa KANTÉ</h2>
+              <p>Backend, Data &amp; Cloud / DevOps</p>
+            </div>
+            <div class="profile-details">
+              <div><span>Formation</span><strong>Master 2 BIHAR</strong></div>
+              <div><span>Établissements</span><strong>ESATIC · ESTIA</strong></div>
+              <div><span>Localisation</span><strong>Abidjan, Côte d'Ivoire</strong></div>
+              <div><span>Disponibilité</span><strong>Stage · Alternance · Freelance</strong></div>
+            </div>
+            <div class="profile-stack">
+              <span>STACK PRINCIPALE</span>
+              <div class="stack-tags">
+                <b>NestJS</b><b>Python</b><b>GCP</b><b>Terraform</b><b>PostgreSQL</b><b>Docker</b>
               </div>
             </div>
           </aside>
@@ -134,164 +105,339 @@ import { Component } from '@angular/core';
   `,
   styles: [`
     .about {
-      padding: 4rem 0;
-      background: #f8fafc;
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      background: var(--paper);
     }
 
-    .container {
-      max-width: 1200px;
+    .page-intro {
+      max-width: 62rem;
+      margin: 0 auto clamp(4rem, 8vw, 7rem);
+      text-align: center;
+    }
+
+    .eyebrow,
+    .block-index {
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+    }
+
+    .eyebrow {
+      margin-bottom: 1.6rem;
+    }
+
+    .eyebrow span {
+      margin-right: 0.65rem;
+      color: var(--accent-dark);
+    }
+
+    .page-intro h1 {
+      margin-bottom: 1.5rem;
+      font-family: var(--serif);
+      font-size: clamp(3.2rem, 7vw, 6.7rem);
+      font-weight: 400;
+      letter-spacing: -0.07em;
+    }
+
+    .page-intro h1 em,
+    .block-heading h2 em {
+      color: #788c5b;
+      font-weight: 400;
+    }
+
+    .lead {
+      max-width: 42rem;
       margin: 0 auto;
-      padding: 0 2rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
     }
 
     .about-content {
       display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 3rem;
+      grid-template-columns: minmax(0, 1fr) 19rem;
       align-items: start;
+      gap: clamp(3rem, 7vw, 7rem);
     }
 
-    .about-text h1 {
-      font-size: clamp(2.3rem, 4vw, 3rem);
-      color: #0f172a;
-      margin-bottom: 1.5rem;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #e2e8f0;
-      border-radius: 1rem;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
-    }
-
-    .intro {
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border-left: 4px solid #2563eb;
-    }
-
-    .intro p,
-    .section p,
-    .value-item p,
-    .area p,
-    .contact-item,
-    .skill-name {
-      color: #475569;
-      line-height: 1.7;
-    }
-
-    .section {
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .section h2 {
-      color: #1d4ed8;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .expertise-areas,
-    .values-grid {
+    .about-main {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
-      margin-top: 1.25rem;
+      gap: 5rem;
     }
 
-    .area,
-    .value-item {
-      padding: 1rem;
-      background: #f8fafc;
-      border-radius: 0.8rem;
-      border: 1px solid #e2e8f0;
+    .story-block {
+      display: grid;
+      grid-template-columns: 10rem minmax(0, 1fr);
+      gap: 2rem;
     }
 
-    .area h3,
-    .value-item h3 {
-      margin-bottom: 0.5rem;
-      color: #0f172a;
+    .block-index {
+      display: inline-block;
+      padding-top: 0.4rem;
+      white-space: nowrap;
+    }
+
+    .story-block h2,
+    .values-block h2 {
+      margin-bottom: 1.2rem;
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 400;
+      letter-spacing: -0.055em;
+    }
+
+    .story-block p {
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .story-block strong {
+      color: var(--ink);
+    }
+
+    .block-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .block-heading h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 400;
+      letter-spacing: -0.055em;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+    }
+
+    .expertise-card {
+      min-height: 14rem;
+      padding: 1.4rem;
+      border: 1px solid var(--line);
+      border-radius: 0.9rem;
+      background: var(--surface);
+    }
+
+    .expertise-number {
+      display: grid;
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 1.4rem;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--dark);
+      background: var(--accent);
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+
+    .expertise-card h3 {
+      margin-bottom: 0.55rem;
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .expertise-card p {
+      margin-bottom: 0.9rem;
+      color: var(--muted);
+      font-size: 0.83rem;
+    }
+
+    .tools {
+      color: #536147;
+      font-size: 0.68rem;
+      font-weight: 650;
+    }
+
+    .values-block h2 {
+      margin-top: 1rem;
+    }
+
+    .values-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .values-list p {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin: 0;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .values-list p span {
+      color: var(--accent-dark);
+      font-size: 0.7rem;
+    }
+
+    .values-list strong {
+      color: var(--ink);
     }
 
     .profile-card {
-      padding: 2rem;
+      position: sticky;
+      top: 7rem;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      background: var(--surface);
+      box-shadow: 0 18px 48px rgba(29, 39, 34, 0.06);
     }
 
-    .profile-info {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #e2e8f0;
+    .profile-top {
+      padding: 1.5rem;
+      color: white;
+      background: var(--dark);
     }
 
-    .profile-info h3 {
-      color: #0f172a;
-      margin-bottom: 0.5rem;
-      font-size: 1.8rem;
-    }
-
-    .title {
-      color: #2563eb;
-      font-weight: 700;
-      margin-bottom: 0.35rem;
-    }
-
-    .education {
-      color: #475569;
-      margin: 0;
-    }
-
-    .contact-info {
-      margin-bottom: 1.5rem;
-    }
-
-    .contact-info h4,
-    .skills-summary h4 {
-      color: #0f172a;
-      margin-bottom: 0.9rem;
-      font-size: 1.1rem;
-    }
-
-    .contact-item {
+    .monogram {
       display: grid;
-      gap: 0.15rem;
-      margin-bottom: 0.75rem;
+      width: 4.2rem;
+      height: 4.2rem;
+      margin-bottom: 1.4rem;
+      place-items: center;
+      border: 1px solid rgba(201,239,103,.5);
+      border-radius: 50%;
+      color: var(--dark);
+      background: var(--accent);
+      font-family: var(--serif);
+      font-size: 1.5rem;
     }
 
-    .label {
-      font-weight: 700;
-      color: #1e293b;
+    .profile-status {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: #d3ded2;
+      font-size: 0.65rem;
     }
 
-    .skill-bars {
+    .profile-status i {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .profile-top h2 {
+      margin: 1.2rem 0 0.25rem;
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+
+    .profile-top p {
+      margin: 0;
+      color: #b7c1b8;
+      font-size: 0.78rem;
+    }
+
+    .profile-details {
       display: grid;
       gap: 1rem;
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--line);
     }
 
-    .skill-bar {
+    .profile-details div {
       display: grid;
-      gap: 0.35rem;
+      gap: 0.2rem;
     }
 
-    .bar {
-      width: 100%;
-      height: 0.7rem;
+    .profile-details span,
+    .profile-stack > span {
+      color: var(--muted);
+      font-size: 0.63rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .profile-details strong {
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .profile-stack {
+      padding: 1.5rem;
+    }
+
+    .stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.8rem;
+    }
+
+    .stack-tags b {
+      padding: 0.35rem 0.55rem;
+      border: 1px solid var(--line);
       border-radius: 999px;
-      background: #e2e8f0;
-      overflow: hidden;
+      color: #48544c;
+      font-size: 0.65rem;
+      font-weight: 500;
     }
 
-    .progress {
-      height: 100%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-    }
-
-    @media (max-width: 900px) {
+    @media (max-width: 850px) {
       .about-content {
         grid-template-columns: 1fr;
+      }
+
+      .profile-card {
+        position: static;
+        max-width: 34rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-intro {
+        text-align: left;
+      }
+
+      .story-block {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .about-main {
+        gap: 3.5rem;
+      }
+
+      .block-heading {
+        display: block;
+      }
+
+      .block-heading .block-index {
+        margin-bottom: 1rem;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .expertise-card {
+        min-height: auto;
+      }
+
+      .expertise-number {
+        margin-bottom: 1rem;
+      }
+
+      .values-list p {
+        flex-wrap: wrap;
       }
     }
   `]
 })
 export class AboutComponent {}
-
